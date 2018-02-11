@@ -1,0 +1,4 @@
+// Letter Constructor
+function Letter () {
+    
+}

@@ -1,0 +1,4 @@
+// Word Constructor
+function Word () {
+    
+}
