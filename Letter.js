@@ -25,5 +25,5 @@ module.exports = Letter;
 
 // Test
 // var a = new Letter("A");
-// // console.log(l);
-// console.log(l.checkChar());
+// // console.log(a);
+// console.log(a.checkChar());
