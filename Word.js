@@ -1,4 +1,4 @@
-var Letter = require('./Letter.js');
+var Letter = require("./Letter.js");
 
 // Word Constructor
 function Word (theWord) {
@@ -9,7 +9,7 @@ function Word (theWord) {
     this.showWord = function() {
         var shownWord = [];
         this.wordArr.forEach(function (element) {
-            shownWord.push(element.show());
+            shownWord.push(element.showChar());
         })
         console.log(`${shownWord.join(" ")}\n`);
     },
@@ -20,7 +20,7 @@ function Word (theWord) {
         this.wordArr.forEach(function (element) {
             // If user input = letter, set booleans to true
             if (userInput === element.character) {
-                element.letterGuess = true;
+                element.charGuess = true;
                 letterGuess = true;
             };
         });
@@ -44,5 +44,5 @@ function Word (theWord) {
 // console.log(test);
 
 
-module.exports = Word;
+module.exports = {Word: Word};
 
