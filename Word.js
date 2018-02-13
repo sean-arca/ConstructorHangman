@@ -44,5 +44,5 @@ function Word (theWord) {
 // console.log(test);
 
 
-module.exports = {Word: Word};
+module.exports = {Word: Word}
 

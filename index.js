@@ -2,7 +2,7 @@ var inquirer = require("inquirer");
 var WordJS = require("./Word.js");
 
 // Global Variables
-var turnsLeft = 10;
+var turnsLeft = 5;
 var words = ["tyrannosaurus", "pterodactyl", "triceratops", "brontosaurus", "velociraptor", "stegosaurus"];
 var wordIndex = Math.floor(Math.random() * words.length);
 var currentWord = new WordJS.Word(words[wordIndex]);
@@ -17,7 +17,7 @@ var newGame = false;
 function startGame() {
     // console.log(turnsLeft);
     // console.log(currentWord.showWord());
-    if (newGame === false && turnsLeft === 10) {
+    if (newGame === false && turnsLeft === 5) {
         console.log('WELCOME TO JURASSIC PARK! - We hope you enjoy your stay! What is the secret password?');
         currentWord.showWord();
         newGame = true;
@@ -91,7 +91,7 @@ function score () {
         // Reset
         wordIndex = Math.floor(Math.random() * words.length);
         currentWord = new WordJS.Word(words[wordIndex]);
-        turnsLeft = 10;
+        turnsLeft = 5;
         lettersCorrect = [];
         lettersGuessed = [];
         currentWord.showWord();
@@ -103,3 +103,6 @@ function score () {
         console.log("YOU HAVE BEEN EATEN. WOMP WOMP.");
     }
 }
+
+// To be fixed:
+// - Pressing the same letter multiple times triggers the pressed already error message, but doing it enough times finishes the round.
